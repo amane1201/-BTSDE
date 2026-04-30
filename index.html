@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<meta name="description" content="底辺歌い手破壊帝国。">
+<meta name="theme-color" content="#0a0000">
+<meta property="og:title" content="底辺歌い手破壊帝国 / OFFICIAL">
+<meta property="og:description" content="破壊せよ、再構築せよ。連邦は常に前進する。">
+<meta property="og:type" content="website">
+<title>底辺歌い手破壊帝国 / OFFICIAL</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Orbitron:wght@600;900&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="boot-screen" class="boot-screen">
+  <div class="boot-inner">
+    <div class="boot-logo">[ BTSDE // FEDERATION ]</div>
+    <pre id="boot-log" class="boot-log"></pre>
+    <div class="boot-bar"><span id="boot-bar-fill"></span></div>
+    <div class="boot-status" id="boot-status">SYSTEM INITIALIZING...</div>
+  </div>
+</div>
+
+<div class="bg-layer" aria-hidden="true">
+  <div class="bg-gradient"></div>
+  <div class="bg-grid"></div>
+  <canvas id="particles"></canvas>
+  <div class="bg-noise"></div>
+  <div class="bg-scanline"></div>
+</div>
+
+<header class="site-header" id="site-header">
+  <div class="header-inner">
+    <a href="#hero" class="brand">
+      <span class="brand-mark">🎤</span>
+      <span class="brand-text">BTSDE<span class="brand-sub">/official</span></span>
+    </a>
+    <nav class="main-nav" id="main-nav">
+      <a href="#about">ABOUT</a>
+      <a href="#members">MEMBERS</a>
+      <a href="#records">RECORDS</a>
+      <a href="#news">NEWS</a>
+      <a href="#links">LINKS</a>
+      <a href="#join" class="nav-cta">JOIN</a>
+    </nav>
+    <button class="nav-toggle" id="nav-toggle" aria-label="menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+<section id="hero" class="hero">
+  <div class="hero-tag">// CLASSIFIED — LEVEL 04</div>
+  <h1 class="hero-title" data-text="底辺歌い手破壊帝国">
+    <span class="line">底辺歌い手</span>
+    <span class="line glitch" data-text="破壊">破壊</span>
+    <span class="line small">帝国</span>
+  </h1>
+  <p class="hero-sub">— Destroy the mediocrity. Rebuild the voice. —</p>
+  <p class="hero-desc">我々は底辺を破壊する。<br>黒歴史を焼き尽くし、帝国の名のもとに再構築する。</p>
+  <div class="hero-actions">
+    <a href="#join" class="btn btn-primary"><i class="fa-solid fa-bolt"></i> 帝国に参加する</a>
+    <a href="#about" class="btn btn-ghost"><i class="fa-solid fa-terminal"></i> 組織概要を見る</a>
+  </div>
+  <div class="hero-meta">
+    <div><span class="meta-k">STATUS</span><span class="meta-v live">● OPERATIONAL</span></div>
+    <div><span class="meta-k">EST.</span><span class="meta-v">2026</span></div>
+  </div>
+  <a href="#about" class="scroll-hint" aria-label="scroll">
+    <span>SCROLL</span>
+    <span class="scroll-line"></span>
+  </a>
+</section>
+
+<section id="about" class="section about">
+  <div class="section-head">
+    <div class="section-index">01</div>
+    <h2 class="section-title">ABOUT <span>/ 組織概要</span></h2>
+    <p class="section-lead">帝国は単なる集団ではない。思想であり、武装であり、正義である。</p>
+  </div>
+  <div class="glass-grid">
+    <article class="glass-card reveal">
+      <div class="card-icon"><i class="fa-solid fa-crosshairs"></i></div>
+      <h3>目的 / MISSION</h3>
+      <p>黒歴史となる活動団体の破壊と再構築。底辺に沈む組織を引き揚げ、植民地として再編する。</p>
+    </article>
+    <article class="glass-card reveal">
+      <div class="card-icon"><i class="fa-solid fa-brain"></i></div>
+      <h3>思想 / DOCTRINE</h3>
+      <p>破壊は再構築である。裏切りは罪である。帝国は人民に武器を与え、黒歴史をを作る者に責任を課す。</p>
+    </article>
+    <article class="glass-card reveal">
+      <div class="card-icon"><i class="fa-solid fa-satellite-dish"></i></div>
+      <h3>活動 / OPERATION</h3>
+      <p>オープンチャットの乗っ取り、破壊、支配。</p>
+    </article>
+  </div>
+</section>
+
+<section id="members" class="section members">
+  <div class="section-head">
+    <div class="section-index">02</div>
+    <h2 class="section-title">MEMBERS <span>/ 構成員</span></h2>
+    <p class="section-lead">我々の偉大なるメンバー</p>
+  </div>
+  <div class="members-grid" id="members-grid" aria-live="polite"></div>
+</section>
+
+<section id="records" class="section records">
+  <div class="section-head">
+    <div class="section-index">03</div>
+    <h2 class="section-title">RECORDS <span>/ 戦績・功績</span></h2>
+    <p class="section-lead">帝国の歩みは記録されている。</p>
+  </div>
+
+  <div class="stats-row">
+    <div class="stat-card reveal"><div class="stat-num" data-target="0">0</div><div class="stat-label">OPERATIONS<br>作戦実行数</div></div>
+    <div class="stat-card reveal"><div class="stat-num" data-target="0">0</div><div class="stat-label">ALLIES<br>連邦支持者</div></div>
+    <div class="stat-card reveal"><div class="stat-num" data-target="0">0</div><div class="stat-label">colony<br>植民地数</div></div>
+  </div>
+
+  <ol class="timeline">
+    <li class="tl-item reveal">
+      <div class="tl-date">2026.04</div>
+      <div class="tl-body">
+        <h4>帝国樹立宣言</h4>
+        <p>オープンチャットに結成が宣言され、初期メンバー3名により樹立が策定された。</p>
+      </div>
+    </li>
+  </ol>
+</section>
+
+<section id="news" class="section news">
+  <div class="section-head">
+    <div class="section-index">04</div>
+    <h2 class="section-title">NEWS <span>/ 最新通達</span></h2>
+    <p class="section-lead">連邦本部から発信される公式通達。</p>
+  </div>
+  <div class="news-track-wrap">
+    <button class="news-nav prev" id="news-prev" aria-label="prev"><i class="fa-solid fa-chevron-left"></i></button>
+    <div class="news-track" id="news-track">
+      <div class="news-loading">LOADING TRANSMISSION...</div>
+    </div>
+    <button class="news-nav next" id="news-next" aria-label="next"><i class="fa-solid fa-chevron-right"></i></button>
+  </div>
+  <div class="news-more-wrap">
+    <button class="btn btn-ghost" id="news-more"><i class="fa-solid fa-plus"></i> もっと見る</button>
+  </div>
+</section>
+
+<section id="links" class="section links">
+  <div class="section-head">
+    <div class="section-index">05</div>
+    <h2 class="section-title">LINKS <span>/ 通信回線</span></h2>
+    <p class="section-lead">連邦の各チャンネルへ接続せよ。</p>
+  </div>
+  <div class="links-grid">
+    <a href="#" class="link-btn yt" target="_blank" rel="noopener">
+      <i class="fa-brands fa-youtube"></i>
+      <span class="lb-t">YouTube</span>
+      <span class="lb-s">公式チャンネル</span>
+    </a>
+    <a href="#" class="link-btn x" target="_blank" rel="noopener">
+      <i class="fa-brands fa-x-twitter"></i>
+      <span class="lb-t">X / Twitter</span>
+      <span class="lb-s">公式アカウント</span>
+    </a>
+    <a href="#" class="link-btn tt" target="_blank" rel="noopener">
+      <i class="fa-brands fa-tiktok"></i>
+      <span class="lb-t">TikTok</span>
+      <span class="lb-s">短編作戦記録</span>
+    </a>
+  </div>
+</section>
+
+<section id="join" class="section join">
+  <div class="join-inner">
+    <div class="join-tag">// RECRUITMENT OPEN</div>
+    <h2 class="join-title">連邦は<br>常に兵士を求めている</h2>
+    <p class="join-lead">階級・年齢・実力は問わない。<br>ただし、怠惰であることは許されない。</p>
+    <div class="join-actions">
+      <a href="#" class="btn btn-join btn-discord" target="_blank" rel="noopener">
+        <i class="fa-brands fa-discord"></i>
+        <span>Discordで参加</span>
+        <small>サブ活動</small>
+      </a>
+      <a href="https://line.me/ti/g2/cc6zAbuCnnOfLKMdxsYYGgQbglVLOu6KQLBCbA?utm_source=invitation&utm_medium=link_copy&utm_campaign=default" class="btn btn-join btn-line" target="_blank" rel="noopener">
+        <i class="fa-solid fa-comments"></i>
+        <span>オープンチャット参加</span>
+        <small>メイン活動</small>
+      </a>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="brand-mark">🎤</span>
+      <div>
+        <div class="footer-name">底辺歌い手破壊主義共和国連邦</div>
+        <div class="footer-sub"> FEDERATION / OFFICIAL</div>
+      </div>
+    </div>
+    <div class="footer-meta">
+      <div>© 2026–<span id="year"></span> BTSDE FEDERATION. ALL TRANSMISSIONS RESERVED.</div>
+      <div class="footer-code">NODE: <span id="node-id">—</span> / UPTIME: <span id="uptime">00:00:00</span></div>
+    </div>
+  </div>
+</footer>
+
+<div class="modal" id="member-modal" aria-hidden="true">
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-panel" role="dialog" aria-modal="true">
+    <button class="modal-close" data-close aria-label="close"><i class="fa-solid fa-xmark"></i></button>
+    <div class="modal-body" id="modal-body"></div>
+  </div>
+</div>
+
+<div class="toast-wrap" id="toast-wrap" aria-live="polite"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
