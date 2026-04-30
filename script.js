@@ -3,7 +3,7 @@ const members = [
     name: "総統",
     role: "president",
     description: "連邦の創設者にして最終決定権者。全てを破壊する者。",
-    icon: "assets/members/やまだ.jpg",
+    icon: "assets/members/やまだ.png",
   },
   {
     name: "幹部",
